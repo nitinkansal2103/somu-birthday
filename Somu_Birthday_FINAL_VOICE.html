@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Somu ♡</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@500;600&display=swap');
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff8f8;color:#382c35;font-family:"DM Sans",sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradient(circle at 12% 12%,rgba(255,185,210,.48),transparent 27%),radial-gradient(circle at 88% 18%,rgba(255,224,160,.42),transparent 24%),radial-gradient(circle at 75% 85%,rgba(194,224,255,.35),transparent 28%),linear-gradient(135deg,#fffaf8,#fff4f6 55%,#f8f6ff)}
+body:after{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background-image:radial-gradient(rgba(150,105,125,.10) 1px,transparent 1px);background-size:24px 24px}
+section{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:70px 20px}
+.wrap{width:min(880px,94vw);text-align:center}
+.eyebrow{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#9c7787;margin-bottom:22px}
+h1,h2{font-family:"Playfair Display",serif;font-weight:500;margin:0}
+h1{font-size:clamp(68px,15vw,145px);line-height:.85}
+h2{font-size:clamp(38px,8vw,72px);line-height:1.05}
+p{font-size:17px;line-height:1.8;color:#665b63;margin:22px auto;max-width:680px}
+.small{font-size:13px;color:#93858d}
+.accent{color:#b85d80;text-shadow:0 0 30px rgba(255,140,185,.18)}
+.pill{display:inline-block;margin-top:35px;padding:13px 20px;border:1px solid rgba(170,105,130,.18);border-radius:999px;color:#765e69;background:rgba(255,255,255,.55);font-size:12px;letter-spacing:1px}
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .9s ease,transform .9s ease}
+.reveal.visible{opacity:1;transform:none}
+.note{margin:30px auto 0;padding:28px;text-align:left;border:1px solid rgba(170,105,130,.13);border-radius:24px;background:rgba(255,255,255,.62);box-shadow:0 12px 35px rgba(150,95,120,.08)}
+.note b{display:block;color:#a94f73;margin-bottom:10px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:32px}
+.box{padding:27px 20px;border-radius:24px;border:1px solid rgba(170,105,130,.13);background:rgba(255,255,255,.62);box-shadow:0 12px 35px rgba(150,95,120,.07);min-height:155px;display:flex;flex-direction:column;justify-content:center}
+.emoji{font-size:30px;margin-bottom:12px}
+.box strong{font-size:18px;margin-bottom:7px}
+.box span{font-size:13px;line-height:1.55;color:#81727b}
+.gallery{
+margin-top:32px;padding:42px 25px;border:1px dashed rgba(170,105,130,.28);
+border-radius:28px;background:rgba(255,255,255,.48)
+}
+.gallery .big{font-family:"Playfair Display",serif;font-size:32px;color:#694557}
+.tripgrid{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:32px}
+.trip{
+padding:22px 14px;border:1px solid rgba(170,105,130,.18);border-radius:20px;
+background:rgba(255,255,255,.62);color:#4a3741;font:500 15px "DM Sans";cursor:pointer;transition:.25s
+}
+.trip:hover{transform:translateY(-4px);background:rgba(255,255,255,.09)}
+#tripResult{display:none;margin:25px auto 0;padding:22px;border-radius:20px;background:rgba(255,190,215,.20);border:1px solid rgba(205,110,145,.20);line-height:1.6}
+button.secretBtn{
+margin-top:25px;border:0;border-radius:999px;padding:15px 23px;background:#eeb6cc;color:#4b2637;box-shadow:0 8px 25px rgba(190,90,130,.16);
+font:600 13px "DM Sans";cursor:pointer;transition:.25s
+}
+button.secretBtn:hover{transform:scale(1.04)}
+#secret{display:none;margin-top:28px}
+#secret.show{display:block;animation:appear .6s ease}
+.final{font-family:"Playfair Display",serif;font-size:clamp(30px,6vw,55px);line-height:1.25;color:#a94f73}
+.signature{margin-top:25px;color:#9a7f8c;font-size:13px}
+.float{position:fixed;bottom:-30px;pointer-events:none;z-index:5;animation:rise 4.5s linear forwards}
+@keyframes rise{to{transform:translateY(-115vh) rotate(35deg);opacity:0}}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media(max-width:600px){
+ section{padding:55px 16px}
+ .grid,.tripgrid{grid-template-columns:1fr}
+ p{font-size:15px}
+ .box{min-height:130px}
+}
+
+.float-decor{position:fixed;inset:0;pointer-events:none;z-index:20;overflow:hidden}
+.balloon,.flower{position:absolute;bottom:-90px;animation:floatUp linear forwards;filter:drop-shadow(0 7px 7px rgba(100,60,80,.12))}
+.balloon{font-size:clamp(34px,6vw,58px)}
+.flower{font-size:clamp(24px,4vw,42px)}
+@keyframes floatUp{0%{transform:translateY(0) rotate(-7deg);opacity:0}10%{opacity:.95}50%{transform:translateY(-55vh) rotate(8deg)}100%{transform:translateY(-120vh) rotate(-10deg);opacity:0}}
+.corner-flower{position:fixed;font-size:52px;z-index:1;pointer-events:none;opacity:.72;animation:sway 4s ease-in-out infinite}
+.cf1{left:2%;top:8%}.cf2{right:2%;top:24%;animation-delay:1s}.cf3{left:3%;bottom:9%;animation-delay:2s}.cf4{right:3%;bottom:12%;animation-delay:.7s}
+@keyframes sway{50%{transform:rotate(10deg) translateY(-7px)}}
+</style>
+</head>
+<body>
+<div class="float-decor" id="decor"></div>
+<div class="corner-flower cf1">🌸</div>
+<div class="corner-flower cf2">🌼</div>
+<div class="corner-flower cf3">🌷</div>
+<div class="corner-flower cf4">🌸</div>
+
+
+<section>
+<div class="wrap">
+<div class="eyebrow">a tiny birthday surprise ✨</div>
+<h1 class="accent">Somu.</h1>
+<p>Oye, idhar aa.<br>Haan, tere liye hi banaya hai. Don't question it. 👀</p>
+<div class="pill">SCROLL KAR — I have something to say</div>
+</div>
+</section>
+
+<section>
+<div class="wrap reveal">
+<div class="eyebrow">first things first</div>
+<h2>Happy Birthday, <span class="accent">Somu</span> 🫶🏻</h2>
+<p>
+Honestly, tu un logon mein se hai jo sirf “friend” banke nahi reh jaate.
+Dheere-dheere apne log ban jaate hain.
+And haan, tu definitely mere apne logon mein se hai.
+</p>
+<div class="note">
+<b>Although...</b>
+Mujhe nahi pata birthday wish ke liye itna effort kyun kar raha hoon.
+Maybe because tu meri best friends mein se hai.
+Ya phir because I have excellent taste in people. 😌
+</div>
+</div>
+</section>
+
+
+<section>
+<div class="wrap reveal">
+<div class="eyebrow">6 months already? 😭</div>
+<h2>And still haven't met?</h2>
+<p>
+We met through OmeTV, started talking… and somehow 6 months later, we still talk endlessly.
+</p>
+<div class="note">
+<b>But seriously...</b>
+Itna time ho gaya, aur maine tujhe real life mein dekha bhi nahi. 😭<br><br>
+<strong style="color:#a94f73;font-size:20px;">I want to meet youuuuu. 🥹🫶🏻</strong><br><br>
+Ab milna toh banta hai. 👀
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap reveal">
+<div class="eyebrow">a scientifically accurate description</div>
+
+<section class="section">
+<div class="card">
+<div class="eyebrow">Okay, one thing I genuinely love about you. 🥹</div>
+<h2>Your voice.</h2>
+<p>Dude, pata nahi kya hai teri awaaz mein…</p>
+<p class="highlight">ek sukoon hai teri awaaz mein. ❤️</p>
+<p>I could honestly listen to you talk for hours.</p>
+</div>
+</section>
+
+<h2>Basically, <span class="accent">you.</span></h2>
+<div class="grid">
+<div class="box"><div class="emoji">🍜</div><strong>Food is serious business.</strong><span>Hum dono foodie hain. Tu khaati bhi hai aur achha khaana bana bhi leti hai. Respect.</span></div>
+<div class="box"><div class="emoji">🧠</div><strong>Division of labour.</strong><span>Overthink karna mera kaam hai. Tu ye department bilkul mat sambhalna. 😭</span></div>
+<div class="box"><div class="emoji">😌</div><strong>Not bakchod.</strong><span>Tu bakchod nahi hai. Main hoon. Isliye balance bana hua hai.</span></div>
+<div class="box"><div class="emoji">🥲</div><strong>One tiny concern.</strong><span>Bechari ko koi bhi dhokha de deta hai. Thoda suspicious rehna seekh le, madam.</span></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap reveal">
+<div class="eyebrow">very important investigation</div>
+<h2>Photo Gallery 📸</h2>
+<div class="gallery">
+<div class="big">I don't have any pics of you 😭</div>
+<p class="small">So technically, this section is your fault.</p>
+<p class="small">Please improve your contribution to this friendship.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap reveal">
+<div class="eyebrow">the actual agenda</div>
+<h2>Hum trip pe kab jaa rahe hain? 🧳</h2>
+<p>Birthday cake baad mein. Pehle ye important decision solve karte hain.</p>
+<div class="tripgrid">
+<button class="trip" onclick="trip('Rajasthan')">🏰 Rajasthan</button>
+<button class="trip" onclick="trip('Bananas')">🍌 Bananas</button>
+<button class="trip" onclick="trip('Himachal')">🏔️ Himachal</button>
+<button class="trip" onclick="trip('You decide')">✨ You decide</button>
+</div>
+<div id="tripResult"></div>
+</div>
+</section>
+
+<section>
+<div class="wrap reveal">
+<div class="eyebrow">okay, one slightly suspicious compliment</div>
+<h2>Don't get used to this.</h2>
+<p>
+Tu meri best friend hai, toh special treatment toh milega.
+Bas zyada khush mat hona — expectations badh jaayengi. 😭
+</p>
+<button class="secretBtn" onclick="openSecret()">Ek last cheez 👀</button>
+<div id="secret">
+<div class="final">You're genuinely one of my favourite people.<br><br>
+And I'm really glad I got to know you.</div>
+<div class="signature">Happy Birthday, Somu ❤️</div>
+</div>
+</div>
+</section>
+
+<script>
+function createDecor(){
+ const decor=document.getElementById("decor");
+ const items=["🎈","🎈","🎈","🌸","🌼","🌷","💮","🎈","🌸"];
+ items.forEach((item,i)=>{
+   const el=document.createElement("div");
+   el.className=item==="🎈"?"balloon":"flower";
+   el.textContent=item;
+   el.style.left=(Math.random()*96)+"%";
+   el.style.animationDuration=(7+Math.random()*7)+"s";
+   el.style.animationDelay=(Math.random()*5)+"s";
+   decor.appendChild(el);
+   setTimeout(()=>el.remove(),15000);
+ });
+}
+createDecor();
+setInterval(createDecor,6500);
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible")})
+},{threshold:.14});
+document.querySelectorAll(".reveal").forEach(e=>observer.observe(e));
+
+function trip(place){
+const result=document.getElementById("tripResult");
+const text={
+"Rajasthan":"Rajasthan it is 🏰 — forts, sunsets, random exploring aur obviously bahut saara khaana. Ab date kaun decide karega? 👀",
+"Bananas":"BANANAS 😭🍌 — I refuse to explain this option. If you choose it, you are officially equally responsible for this friendship.",
+"Himachal":"Himachal 🏔️ — mountains, thand, chai aur finally ek trip jahan main overthink nahi karunga. Probably.",
+"You decide":"You decide? 😌 Theek hai. But destination boring nikla toh blame tumhara."
+};
+result.innerHTML="<strong>Decision:</strong> "+text[place];
+result.style.display="block";
+}
+
+function openSecret(){
+document.getElementById("secret").classList.add("show");
+for(let i=0;i<18;i++){
+let x=document.createElement("div");
+x.className="float";
+x.textContent=["♡","✦","♥","✨","🌸","🌷","🎈"][Math.floor(Math.random()*7)];
+x.style.left=Math.random()*100+"%";
+x.style.fontSize=(14+Math.random()*15)+"px";
+x.style.animationDelay=Math.random()*.8+"s";
+document.body.appendChild(x);
+setTimeout(()=>x.remove(),5000);
+}
+}
+</script>
+</body>
+</html>
